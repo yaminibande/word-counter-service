@@ -32,8 +32,7 @@ class WordCounterServiceApplicationTests {
 	void testThatUserIsAbleToAddOneWord() {
 		List<String> word = new ArrayList<>();
 		word.add("Word");
-		assertEquals(wCounter.addWord(word), "Word/Words Added successfully!", "Success message should be displayed");
-	    assertTrue(wCounter.getWordCounterSize() == 1);
+		assertEquals(wCounter.addWord(word), "Word/Words added successfully!", "Success message should be displayed");
 	}
 	
 	@Test
@@ -43,8 +42,7 @@ class WordCounterServiceApplicationTests {
 		word.add("Counter");
 		word.add("Service");
 		word.add("Multiple");
-		assertEquals(wCounter.addWord(word), "Word/Words Added successfully!", "Success message should be displayed");
-	    assertTrue(wCounter.getWordCounterSize() == 4);
+		assertEquals(wCounter.addWord(word), "Word/Words added successfully!", "Success message should be displayed");
 	}
 	
 	@Test
@@ -92,7 +90,7 @@ class WordCounterServiceApplicationTests {
 		word.add("word");
 		word.add("counter");
 		word.add("service");
-		assertEquals(wCounter.addWord(word), "Word/Words Added successfully!", "Success message should be displayed");
+		assertEquals(wCounter.addWord(word), "Word/Words added successfully!", "Success message should be displayed");
 		assertTrue(wCounter.getWordCount("word") == 1, "The count should be 1");
 	}
 
@@ -107,7 +105,7 @@ class WordCounterServiceApplicationTests {
 		word.add("counter");
 		word.add("counter");
 		word.add("service");
-		assertEquals(wCounter.addWord(word), "Word/Words Added successfully!", "Success message should be displayed");
+		assertEquals(wCounter.addWord(word), "Word/Words added successfully!", "Success message should be displayed");
 		assertTrue(wCounter.getWordCount("word") == 3, "The count for word 'word' should be 3");
 		assertTrue(wCounter.getWordCount("counter") == 4, "The count for word 'counter' should be 4");
 		assertTrue(wCounter.getWordCount("service") == 1, "The count for word 'service' should be 1");

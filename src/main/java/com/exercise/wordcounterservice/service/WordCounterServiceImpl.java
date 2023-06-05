@@ -20,7 +20,7 @@ public class WordCounterServiceImpl implements WordCounterService {
 		wordList.parallelStream().peek(s -> validateInputData(s)).map(s -> translator.translate(s)).forEach(s -> {
 			wordMap.put(s, wordMap.getOrDefault(s, 0) + 1);
 		});
-		return "Word/Words Added successfully!";
+		return "Word/Words added successfully!";
 	}
 
 	private void validateInputData(String word) {
@@ -33,10 +33,6 @@ public class WordCounterServiceImpl implements WordCounterService {
 	public long getWordCount(String word) {
 		validateInputData(word);
 		return wordMap.getOrDefault(word, 0);
-	}
-
-	public int getWordCounterSize() {
-		return wordMap.size();
 	}
 
 	public void clearWordCounter() {
