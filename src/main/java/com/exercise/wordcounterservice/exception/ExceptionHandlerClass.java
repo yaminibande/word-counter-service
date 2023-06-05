@@ -10,7 +10,7 @@ public class ExceptionHandlerClass {
 	
 	@ExceptionHandler(IllegalArgumentException.class)
 	public ResponseEntity<String> handleIllegalArgumentException(IllegalArgumentException ex) {
-		return new ResponseEntity<>("Please check the request",HttpStatus.BAD_REQUEST);
+		return new ResponseEntity<>("Please check the request.Word/words should not be empty or contain non-alphabetic characters.",HttpStatus.BAD_REQUEST);
 	}
 
 }

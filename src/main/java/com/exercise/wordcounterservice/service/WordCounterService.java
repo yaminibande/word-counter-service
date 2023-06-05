@@ -4,9 +4,9 @@ import java.util.List;
 
 public interface WordCounterService {
 
-	public void addWord(List<String> wordList);
+	public String addWord(List<String> wordList);
 
-	public Integer getWordCount(String word);
+	public long getWordCount(String word);
 	
 
 }
